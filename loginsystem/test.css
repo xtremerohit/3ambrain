@@ -1,0 +1,64 @@
+.flex-container {
+  display: flex;
+  height: 100vh;
+  align-items: center;
+  background-color: rgb(247, 247, 255);
+  border: 2px solid yellow;
+  gap: 3em;
+
+}
+
+.flex-child {
+  flex: 1;
+  gap: 3em;
+}
+
+.flex-child:first-child {
+  margin-right: 20px;
+}
+
+@media(max-width:1200px){
+
+    .flex-container{
+        height: 100%;
+        flex-direction: column;
+    }
+    .flex-child{
+        /* max-width: 80%; */
+        padding: 10px;
+    }
+
+}
+
+.btn1 .btn{
+    display: flex;
+    justify-content: center;
+    margin-left: auto;
+    margin-right: auto;
+    justify-content: center;
+    align-items: center;
+    background-color: black;
+    color: white;
+    gap: 1em;
+    padding-left: 30px;
+    padding-right: 30px;
+
+}
+
+.btn #mybtn{
+    display: flex;
+    justify-content: center;
+    margin-left: auto;
+    margin-right: auto;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(233, 207, 12);
+    color: rgb(0, 0, 0);
+    gap: 1em;
+    padding-left: 30px;
+    padding-right: 30px;
+}
+
+
+
+
