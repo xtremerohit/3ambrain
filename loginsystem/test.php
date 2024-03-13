@@ -20,19 +20,31 @@ if (!isset($_SESSION['loggedin']) || $_SESSION['loggedin'] != true) {
       display: flex;
       flex-direction: row;
       align-items: center;
-      gap: 7em;
       margin-left: 0%;
       border-radius: 2em;
       box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
-
+      
+      gap: 7em;
     }
-
+    .shareCount{
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      
+    }
+    .liksCount{
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+    }
+    
     .card-img-top {
-      min-width: 10%;
-      max-width: 13%;
+      min-width: 16%;
+      max-width: 19%;
       border-radius: 50%;
       /* margin: 0 auto; */
       margin-left: 12px;
+      margin-right: 80px;
       margin-top: 12px;
       margin-bottom: 12px;
       box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
@@ -44,10 +56,17 @@ if (!isset($_SESSION['loggedin']) || $_SESSION['loggedin'] != true) {
 <body>
   <?php include 'navbar.php' ?>
   <div class="row">
-    <div class="card mt-4">
-      <img src="astronaut.jpg" class="card-img-top" alt="">
+    <div class="card mt-4 mr-4">
+      <div class="shareCount">
+        <img src="astronaut.jpg" class="card-img-top" alt="">
         <h3>2443</h3>
-        <img src="rocket.jpg" alt="">
+        <img style="width: 45px;" src="rocket.jpg" alt="">
+        
+        <div  class="liksCount" style="margin: 45px;">
+          <h3>23K</h3>
+          <img style="width: 45px;" src="like.png" alt="">
+        </div>
+      </div>
     </div>
   </div>
   <div class="card mt-4">
