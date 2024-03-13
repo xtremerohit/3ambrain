@@ -19,6 +19,7 @@ if (!isset($_SESSION['loggedin']) || $_SESSION['loggedin'] != true) {
   </head>
   <body>
   <?php include 'loginsystem/navbar.php' ?>
+  
     
 
     <!-- Optional JavaScript; choose one of the two! -->

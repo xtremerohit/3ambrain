@@ -42,33 +42,38 @@ if (!isset($_SESSION['loggedin']) || $_SESSION['loggedin'] != true) {
             display: flex;
             flex-direction: row;
             align-items: center;
+            margin-left: auto;
+            margin-right: auto;
 
         }
 
         .liksCount {
             display: flex;
-            flex-direction: row;
+            flex-direction: column;
             align-items: center;
+            margin-left: 12px;
+            margin-right: 12px;
         }
 
         .card-img-top {
             border-radius: 50%;
             /* margin: 0 auto; */
+            align-items: center;
             margin-left: 12px;
-            margin-right: 80px;
+            margin-right: 12px;
             margin-top: 12px;
-            margin-bottom: 12px;
+            margin-bottom: 7px;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
         }
 
-        h3 {
-            font-family: "Madimi One", sans-serif;
-            font-weight: 400;
-            font-style: normal;
-            
+        .col{
+            align-items: center;
+            margin-left: 12px;
+            margin-right: 12px;
         }
+    
 
-        @media screen and (min-width: 200px) {
+        @media screen and (min-width: 400px) {
             .card-img-top {
                 min-width: 70px;
             }
@@ -88,19 +93,21 @@ if (!isset($_SESSION['loggedin']) || $_SESSION['loggedin'] != true) {
 <body>
     <div class="row">
         <div class="card mt-4" >
+            <img src="astronaut.jpg" class="card-img-top" alt="">
+            <p style="text-align: center"><b>@Username</b></p>
             <div class="row">
 
                 <div class="col">
                 <div class="shareCount">
-                        <img src="astronaut.jpg" class="card-img-top" alt="">
-                        <h3>2443</h3>
-                        <img style="width: 45px;" src="rocket.jpg" alt="">
-                        <div class="liksCount" style="margin: 35px;">
-                            <h3>23K</h3>
+                        <div class="col card-body ">
+                            <img style="width: 35px; align-items: center;" src="/3ambrain/loginsystem/imgfile/brainstorm.png" alt="">
+                            <p><b>134</b></p>
+                        </div>
+                        <div class="liksCount card-body">
                             <img style="width: 35px;" src="like.png" alt="">
+                            <p><b>23k</b></p>
                         </div>
                     </div>
-                    <p><b>@Username</b></p>
                     
             </div>
             </div>

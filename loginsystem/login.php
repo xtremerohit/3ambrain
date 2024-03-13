@@ -18,7 +18,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         session_start();
         $_SESSION['loggedin'] = true;
         $_SESSION['username'] = $username;
-        header("location: /3ambrain/index.php");
+        header("location:/3ambrain/loginsystem/profile.php");
       } else {
         $showError = "Invalid Credentials";
       }
