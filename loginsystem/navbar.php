@@ -48,7 +48,7 @@ else{
         if($loggedin){
 
           echo '<li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="/3ambrain//loginsystem/profile.php">Profile</a>
+          <a class="nav-link active" aria-current="page" href="/3ambrain/loginsystem/prifile.php">Profile</a>
           </li>
           <li class="nav-item">
           <a class="nav-link active" aria-current="page" href="/3ambrain//loginsystem/logout.php">logout</a>

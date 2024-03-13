@@ -1,33 +1,9 @@
 <?php
-$login = false;
-$showError = false;
-if ($_SERVER["REQUEST_METHOD"] == "POST") {
-  include 'db.php';
-  $username = $_POST["username"];
-  $password = $_POST["password"];
-
-
-  // $sql = "Select * from users where username='$username' AND password='$password'";
-  $sql = "Select * from user_login where username='$username'";
-  $result = mysqli_query($conn, $sql);
-  $num = mysqli_num_rows($result);
-  if ($num == 1) {
-    while ($row = mysqli_fetch_assoc($result)) {
-      if (password_verify($password, $row['user_password'])) {
-        $login = true;
-        session_start();
-        $_SESSION['loggedin'] = true;
-        $_SESSION['username'] = $username;
-        header("location: /3ambrain/index.php");
-      } else {
-        $showError = "Invalid Credentials";
-      }
-    }
-  } else {
-    $showError = "Invalid Credentials";
-  }
+session_start();
+if (!isset($_SESSION['loggedin']) || $_SESSION['loggedin'] != true) {
+  header("location: loginsystem/login.php");
+  exit;
 }
-
 ?>
 <!doctype html>
 <html lang="en">
@@ -39,56 +15,44 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
   <!-- Bootstrap CSS -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+  <style>
+    .card {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      gap: 7em;
+      margin-left: 0%;
+      border-radius: 2em;
+      box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
 
-  <link rel="stylesheet" href="style.css">
-  <link rel="stylesheet" href="styleforgooglesignbtn.css">
-  <link rel="stylesheet" href="test.css">
+    }
 
-
-  <title>LogIn</title>
+    .card-img-top {
+      min-width: 10%;
+      max-width: 13%;
+      border-radius: 50%;
+      /* margin: 0 auto; */
+      margin-left: 12px;
+      margin-top: 12px;
+      margin-bottom: 12px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    }
+  </style>
+  <title>Hello, world!</title>
 </head>
 
 <body>
-  <?php include 'navbar.php' ?> 
-  <div class="flex-container">
+  <?php include 'navbar.php' ?>
+  <div class="row">
+    <div class="card mt-4">
+      <img src="astronaut.jpg" class="card-img-top" alt="">
+        <h3>2443</h3>
+        <img src="rocket.jpg" alt="">
+    </div>
+  </div>
+  <div class="card mt-4">
 
-    aa
-    <div class="flex-child green">
-      <div class="main-section mt-3">
-        <p class="text-center" style="font-size: 25px; font-weight: bold;">Login to Your Account</p>
-        <div class="card">
-          <p class="text-center mt-3" style="font-size: 25px; font-weight: bold;">Login</p>
-          <form action="login.php" method="post">
-            <div class="form-group mt-3">
-              <input type="text" class="form-control" placeholder="Username" maxlength="12" name="username" maxlength="12" id="username" aria-describedby="">
-            </div>
-            <div class="form-group mt-3">
-              <input type="password" placeholder="Password" class="form-control" name="password" id="password">
-            </div>
-            <button type="submit" class="btn btn-primary mt-4 ">Login</button>
-          </form>
-          
-        </div>
-      </div>
-      <p class="text-center mt-3" style="font-size: 15px; font-weight: bold;">Don't have an account? <a href="/3ambrain/loginsystem/signup.php">Sign up</a></p>
-      <div class="btn1">
-        <button class="btn primery">
-          <img style="width: 20px;" src="/3ambrain/loginsystem/imgfile/googleimg.png" alt="">
-          Login With Google
-        </button>
-      </div>
-    </div>
-    <div class="flex-child magenta">
-   <div class="card-body ">
-    <img style="width: 550px;" src="homepageimg.jpg" alt="">
-   </div>
-    </div>
-    
-  </div> 
-  
-  
-  
-  
+  </div>
 
   <!-- Optional JavaScript; choose one of the two! -->
 
