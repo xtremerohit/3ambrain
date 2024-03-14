@@ -22,7 +22,7 @@ if (!isset($_SESSION['loggedin']) || $_SESSION['loggedin'] != true) {
 </head>
 
 <body>
-  <?php include 'loginsystem/navbar.php' ?>
+  <?php include 'HomeNavbar.php' ?>
 
 
 

@@ -49,7 +49,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 </head>
 
 <body>
-  <?php include("loginsystem/loginSystemNavbar.php") ?>
+  <?php include("loginSystemNavbar.php") ?>
   <?php
   if ($showAlert) {
     echo '<div class="alert alert-success" role="alert">
@@ -58,24 +58,25 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
   }
   ?>
   <div class="main-section mt-3">
-    <p class="text-center" style="font-size: 25px; font-weight: bold;">Create Your Account</p>
+    <h1 class="text-center" style="font-weight: bold;">Create Your Account</h1>
     <p class="text-center" style="font-size: 15px; font-weight: bold;" >Share Your imagination at 3Am Anonymously </p>
     <div class="card">
     <p class="text-center mt-3" style="font-size: 25px; font-weight: bold;">SignUp</p>
       <form  action="signup.php" method="post">
         <div class="form-group">
           <!-- <label for="">Username</label> -->
-          <input type="text" class="validate"  placeholder="Username" maxlength="12" name="username" maxlength="12" id="username" aria-describedby="" required>
+          <input type="text" class="validate"  placeholder="Create Username" maxlength="12" name="username" maxlength="12" id="username" aria-describedby="" required>
         </div>
         <div class="form-group">
           <!-- <label for="">Password</label> -->
-          <input type="password" placeholder="Password" class="validate" name="password" id="password" required>
+          <input type="password" placeholder="Create Password" class="validate" name="password" id="password" required>
         </div>
         <div class="form-group">
           <!-- <label for="">Password</label> -->
-          <input type="password" placeholder="Password" class="validate" name="cpassword" id="cpassword" required>
+          <input type="password" placeholder="Confirm password" class="validate" name="cpassword" id="cpassword" required>
         </div>
-        <button type="submit" class="btn btn-primary mt-4">SignUp</button>
+        <button type="submit" class="btn btn-primary mt-4" style="border-radius: 20px;"><b>SignUp</b></button>
+        <p class="text-center">or</p>
       </form>
         <div class="gimg btn mb-3">
           <img style="width: 30px;" src="/3ambrain/loginsystem/imgfile/googleimg.png" alt="">

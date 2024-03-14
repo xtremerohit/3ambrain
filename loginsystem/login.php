@@ -49,13 +49,14 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 </head>
 
 <body>
-  <?php include 'loginsystem/loginSystemNavbar.php' ?> 
+  <?php include 'loginSystemNavbar.php' ?> 
   <div class="flex-container">
 
     
     <div class="flex-child green">
-      <div class="main-section mt-3">
-        <p class="text-center" style="font-size: 25px; font-weight: bold;">Login to Your Account</p>
+      <div class="main-section mt-2">
+        <h1 class="text-center mb-4" style="font-weight: bold;">Welcome Back</h1>
+        <p class="text-center ">Log in to your acount</p>
         <div class="card">
           <p class="text-center mt-3" style="font-size: 25px; font-weight: bold;">Login</p>
           <form action="login.php" method="post">
@@ -65,7 +66,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             <div class="form-group mt-3">
               <input type="password" placeholder="Password" class="form-control" name="password" id="password">
             </div>
-            <button type="submit" class="btn btn-primary mt-4 ">Login</button>
+            <button type="submit" class="btn btn-primary mt-4" style="border-radius: 20px;"><b>Login</b></button>
           </form>
           
         </div>

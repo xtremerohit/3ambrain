@@ -87,11 +87,11 @@ if (!isset($_SESSION['loggedin']) || $_SESSION['loggedin'] != true) {
             }
         }
     </style>
-    <title>Hello, world!</title>
+    <title>Your Profile</title>
 </head>
 
 <body>
-  <?php include 'loginsystem/navbar.php' ?>
+  <?php include 'homeNavbar.php' ?>
 
     <div class="row">
         <div class="card mt-4" >

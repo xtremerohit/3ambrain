@@ -70,7 +70,7 @@ if (!isset($_SESSION['loggedin']) || $_SESSION['loggedin'] != true) {
 </head>
 
 <body>
-  <?php include 'navbar.php' ?>
+  <?php include 'loginSystemNavbar.php' ?>
   <div class="astroimg">
     <div class="card mt-5">
       <h3 class="text-center mt-3" id="lsbletext">Contact us</h3>
@@ -103,7 +103,7 @@ if (!isset($_SESSION['loggedin']) || $_SESSION['loggedin'] != true) {
           <label for="exampleFormControlTextarea1">Example textarea</label>
           <textarea class="form-control" rows="4" cols="50" id="exampleFormControlTextarea1" rows="3"></textarea>
         </div>
-        <button type="submit" class="btn btn-primary mt-4 ">submit</button>
+        <button type="submit" class="btn btn-primary mt-4 mb-4">submit</button>
       </form>
     </div>
   </div>
