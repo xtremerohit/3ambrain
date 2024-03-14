@@ -18,7 +18,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         session_start();
         $_SESSION['loggedin'] = true;
         $_SESSION['username'] = $username;
-        header("location:/3ambrain/loginsystem/profile.php");
+        header("location:/3ambrain/profile.php");
       } else {
         $showError = "Invalid Credentials";
       }
@@ -49,7 +49,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 </head>
 
 <body>
-  <?php include 'navbar.php' ?> 
+  <?php include 'loginsystem/loginSystemNavbar.php' ?> 
   <div class="flex-container">
 
     

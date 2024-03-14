@@ -49,7 +49,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 </head>
 
 <body>
-  <?php include("navbar.php") ?>
+  <?php include("loginsystem/loginSystemNavbar.php") ?>
   <?php
   if ($showAlert) {
     echo '<div class="alert alert-success" role="alert">

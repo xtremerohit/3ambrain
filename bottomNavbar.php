@@ -1,3 +1,11 @@
+<?php
+if (isset($_SESSION['loggedin']) && $_SESSION['loggedin'] == true) {
+  $loggedin = true;
+} else {
+  $loggedin = false;
+}
+
+?>
 <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/2.1.0/uicons-solid-rounded/css/uicons-solid-rounded.css'>
 <style>
     /* Place the navbar at the bottom of the page, and make it stick */
@@ -35,6 +43,6 @@
 </style>
 <div class="navbar" id="bottomNav">
     <a href="/3ambrain/index.php"><button id="Navbtn"><i><img style="width: 28px;" src="/3ambrain/loginsystem/imgfile/rocket.png" alt=""></i></button></i></a>
-    <a href="/3ambrain/loginsystem/dashboard.php"><button id="Navbtn"><i class="fi fi-sr-add mt-1"></i></button></i></a>
-    <a href="/3ambrain/loginsystem/profile.php"><button id="Navbtn"><i class="fi fi-sr-user mt-1"></i></button></i></a>
+    <a href="/3ambrain/dashboard.php"><button id="Navbtn"><i class="fi fi-sr-add mt-1"></i></button></i></a>
+    <a href="/3ambrain/profile.php"><button id="Navbtn"><i class="fi fi-sr-user mt-1"></i></button></i></a>
 </div>

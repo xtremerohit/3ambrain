@@ -91,11 +91,11 @@ if (!isset($_SESSION['loggedin']) || $_SESSION['loggedin'] != true) {
 </head>
 
 <body>
-  <?php include 'navbar.php' ?>
+  <?php include 'loginsystem/navbar.php' ?>
 
     <div class="row">
         <div class="card mt-4" >
-            <img src="astronaut.jpg" class="card-img-top" alt="">
+            <img src="/3ambrain/loginsystem/imgfile/astronaut.jpg" style="border-radius: 50%;" class="card-img-top" alt="">
             <p style="text-align: center"><b>@Username</b></p>
             <div class="row">
 
@@ -106,7 +106,7 @@ if (!isset($_SESSION['loggedin']) || $_SESSION['loggedin'] != true) {
                             <p><b>134</b></p>
                         </div>
                         <div class="liksCount card-body">
-                            <img style="width: 35px;" src="like.png" alt="">
+                            <img style="width: 35px;" src="/3ambrain/loginsystem/imgfile/like.png" alt="">
                             <p><b>23k</b></p>
                         </div>
                     </div>
