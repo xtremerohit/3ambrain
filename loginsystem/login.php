@@ -42,7 +42,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
   <link rel="stylesheet" href="/3ambrain/css/style.css">
   <link rel="stylesheet" href="/3ambrain/css/styleforgooglesignbtn.css">
-  <link rel="stylesheet" href="test.css">
 
 
   <title>LogIn</title>
